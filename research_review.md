@@ -2,9 +2,9 @@
 
 ## Representation: domain representation language
 
-Searching for a solutions to a planning problem requires that the problem be represented in a way that enables efficient manipulation and reasoning. **Problem and plan representation** has therefore been an essential component of research in AI planning since its very beginnings.
+Searching for solutions to a planning problem requires that the problem be represented in a way that enables efficient manipulation and reasoning. **Problem and plan representation** has therefore been an essential component of research in AI planning since its very beginnings.
 
-Being able to encode planning domains and problems using a common formalism has been the focus of a early line of research in AI planning. In 1998, Ghallab et al. introduced the **Problem Domain Description Language (PDDL)**, which followed a number of other efforts (STRIPS, ADL, SIPE-2, Prodigy-4, UMCP, UNPOP, and UCPOP). In their paper *PDDL -- The planning domain definition language* Ghallab et al. describe the syntax and the semantics of the proposed language, which was 'intended to **express the "physics" of a domain**, that is, what predicates there are, what actions are possible, what the structure of compound actions is, and what the effects of actions are', leaving for further extension 'the search-control advice that most planners need' [1]. Concretely, the authors propose as the syntactic notation a form of Extended BNF, which can describe: the structure of a domain, actions, goals, effects, action expansions (an alternative to goal definitions, used in some classical hierarchical planners), axioms ('logical formulas that assert relationships among propositions that hold within a situation'), and safety constraints ('background goals that must be satisfied throughout the planning process') [1]. These elements allow the specification of problems, which are the object of planning systems. 
+Being able to encode planning domains and problems using a common formalism has been the focus of an early line of research in AI planning. In 1998, Ghallab et al. introduced the **Problem Domain Description Language (PDDL)**, which followed a number of other efforts (STRIPS, ADL, SIPE-2, Prodigy-4, UMCP, UNPOP, and UCPOP). In their paper *PDDL -- The planning domain definition language* Ghallab et al. describe the syntax and the semantics of the proposed language, which was 'intended to **express the "physics" of a domain**, that is, what predicates there are, what actions are possible, what the structure of compound actions is, and what the effects of actions are', leaving for further extension 'the search-control advice that most planners need' [1]. Concretely, the authors propose as the syntactic notation a form of Extended BNF, which can describe: the structure of a domain, actions, goals, effects, action expansions (an alternative to goal definitions, used in some classical hierarchical planners), axioms ('logical formulas that assert relationships among propositions that hold within a situation'), and safety constraints ('background goals that must be satisfied throughout the planning process') [1]. These elements allow the specification of problems, which are the object of planning systems. 
 
 PDDL has been adopted ever since its creation as the standard for the International Planning Competition. PDDL is still in use today, and is now at version 3.1. A number of variants and extensions to PDDL have been defined over time, each enhancing or modifying specific aspects; for example, in 2004 PPDDL (Probabilistic PDDL) introduced, among other things, probabilistic effects ('discrete, general probability distributions over possible effects of an action') [2]. It is thus fair to say that this influential work has succeeded in its stated aim of encouraging problem and algorithm sharing and comparison, thus making an important contribution to the advancement of the field of AI planning.
  
@@ -26,7 +26,7 @@ Sources (to access the source please click on the link):
 
 1. [Cimatti et al. 1998 paper: *Automatic OBDD-based generation of universal plans in non-deterministic domains*](http://www.aaai.org/Papers/AAAI/1998/AAAI98-124.pdf)
 2. [Wikipedia article on binary-decision diagrams](https://en.wikipedia.org/wiki/Binary_decision_diagram)
-3. [AIMA book](http://aima.cs.berkeley.edu/)
+3. [Russel and Norvig's *AIMA* book, 3rd edition 2010](http://aima.cs.berkeley.edu/)
 
 ## Partial-order planning
 
@@ -40,4 +40,4 @@ Sources (to access the source please click on the link):
 
 1. [Chapman 1987 report: *Planning for conjunctive goals*](http://www.dtic.mil/cgi-bin/GetTRDoc?AD=ADA165883)
 2. [Wikipedia article on partial-order planning](https://en.wikipedia.org/wiki/Partial-order_planning)
-3. [AIMA book](http://aima.cs.berkeley.edu/)
+3. [Russel and Norvig's *AIMA* book, 3rd edition 2010](http://aima.cs.berkeley.edu/)
