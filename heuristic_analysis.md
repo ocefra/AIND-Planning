@@ -1,6 +1,6 @@
 # Project 3. Heuristic analysis
 
-This analysis provides a comparison between a number of search algorithms applied to planning problems. The algorithms have all been tested on **three planning problems of increasing complexity**, all in the air cargo domain. The tests have been carried out in similar conditions, on an HP EliteBook with an Intel(R) Core(TM) i7-4600U 2.10GHz CPU and 16 GB of RAM, running Ubuntu 16.04.
+This analysis provides a comparison between the performance of a number of search algorithms applied to planning problems. The algorithms have all been tested on **three planning problems of increasing complexity**, all in the air cargo domain. The tests have been carried out in similar conditions, on an HP EliteBook with an Intel(R) Core(TM) i7-4600U 2.10GHz CPU and 16 GB of RAM, running Ubuntu 16.04.
 
 The performance of each algorithm is reported in terms of the following **metrics**: number of node expansions required, number of goal tests performed, number of new nodes generated, length of the plan found, and time elapsed (in seconds). The **optimality** of the solution is assessed in terms of the plan length.
 
