@@ -26,9 +26,9 @@ Table: Comparative performance of BFS, DFS, and UCS on the three planning proble
 
 These results show that **DFS consistently fares best on all counts *except on the length of the plan found***. Indeed, there is a striking constrast between the results (time taken, and number of expansions and tests performed) of DFS on the one hand, and BFS and UCS on the other. The size of the problem seems to have a considerable effect on BFS and UCS: each increase in size (from problem 1 to problem 2, and from problem 2 to problem 3) results in additional time required and an increasing number of nodes expanded for the latter two algorithms. In contrast, DFS' performance is roughly the same for problem 2 and problem 3.
 
-As already pointed out, notwithstanding its speed, DFS consistently finds solutions which is are far from optimal (as defined above), while BFS and UCS are both able to find the optimal (i.e. shortest) solution: DFS' plan is twice as long as that of BFS and UCS for problem 1, over 60 times longer for problem 2, and about 50 times longer for problem 3. This result is not surprising, given the way DFS works: **DFS is suboptimal**, since it always explores the entire left subtree before proceeding to the right; as a result, it may find a goal node which is located deeper than another goal found more to the right in the tree.
+As already pointed out, notwithstanding its speed, DFS consistently finds solutions which is are far from optimal (as defined above), while BFS and UCS are both able to find the optimal (i.e. shortest) solution: DFS' plan is twice as long as that of BFS and UCS for problem 1, over 60 times longer for problem 2, and about 50 times longer for problem 3. This result is not surprising, given the way DFS works: **DFS is suboptimal**, since it always explores the entire left subtree before proceeding to the right; as a result, it may find a goal node which is located deeper than another goal found more to the right in the tree [1, p. 86].
 
-Conversely, both **BFS and UCS are optimal** in the sense of the above definition (optimality with the path cost being a nondecreasing function of the depth of the node). Indeed, BFS always generates the next shallowest node; therefore it is guaranteed always to find the goal node with the shortest path (provided its depth is finite). In turn, UCS is guaranteed to find the goal node with the lowest total cost (provided it does not get stuck on an infinite sequence of zero-cost actions), since it always expands nodes in order of their optimal path cost.
+Conversely, both **BFS and UCS are optimal** in the sense of the above definition (optimality with the path cost being a nondecreasing function of the depth of the node). Indeed, BFS always generates the next shallowest node; therefore it is guaranteed always to find the goal node with the shortest path (provided its depth is finite) [1, p. 81]. In turn, UCS is guaranteed to find the goal node with the lowest total cost (provided it does not get stuck on an infinite sequence of zero-cost actions), since it always expands nodes in order of their optimal path cost [1, p. 85].
 
 ## Informed (heuristic) search for planning problems
 
@@ -50,7 +50,7 @@ The following round of experiments tests the A* algorithm on our planning proble
 
 Table: Comparative performance of A* with no heuristic, the ignore-preconditions heuristic, and the level-sum heuristic, on the three planning problems.
 
-Running A* with no heuristic at all amounts to running a UCS on the problem. The gains in performance under all criteria, including speed of execution, are impressive for the ignore-preconditions heuristic. However, while level sum lowers even further the number of expansions and goal tests, this comes at the cost of speed: the time needed for A* to find a solution using the level-sum heuristic is orders of magnitude longer than that of A* with the ignore-preconditions heuristic or with no heuristic at all. For problem 3, A* with level sum took 30 minutes on my machine, while with ignore preconditions it only took 18 seconds. But this increase in time was to be expected. It follows from the fact that the level sum heuristic uses a planning graph, and building it takes time which is polynomial in the size of the problem.
+Running A* with no heuristic at all amounts to running a UCS on the problem. The gains in performance under all criteria, including speed of execution, are impressive for the ignore-preconditions heuristic. However, while level sum lowers even further the number of expansions and goal tests, this comes at the cost of speed: the time needed for A* to find a solution using the level-sum heuristic is orders of magnitude longer than that of A* with the ignore-preconditions heuristic or with no heuristic at all. For problem 3, A* with level sum took 30 minutes on my machine, while with ignore preconditions it only took 18 seconds. But this increase in time was to be expected. It follows from the fact that the level sum heuristic uses a planning graph, and building it takes time which is polynomial in the size of the problem [1, p. 381].
 
 It also appears that **A* with level sum is, in fact, not optimal**. For problem 3 it returns a solution which is not the shortest path to a goal. On the other hand, A* with ignore preconditions does seem to be optimal. (For increased confidence, I have replicated the results for A* with level sum on problem 3 -- both time and plan length -- in a few more runs.)
 
@@ -119,3 +119,7 @@ Unload(C3, P1, JFK)
 Unload(C1, P1, JFK)
 
 Unload(C2, P2, SFO)
+
+## References
+
+[1] Russell, Stuart J., and Peter Norvig. 2010. *Artificial intelligence: a modern approach*. Upper Saddle River: Prentice Hall. 
